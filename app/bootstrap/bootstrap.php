@@ -2,7 +2,7 @@
 
 use DI\Bridge\Slim\Bridge as SlimAppFactory;
 
-$container = require_once('app/config/loadConfig.php');
+$container = require_once('app/config/Config.php');
 
 $app = SlimAppFactory::create($container);
 

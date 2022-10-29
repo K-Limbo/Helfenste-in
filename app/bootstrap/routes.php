@@ -10,5 +10,5 @@ return function(App $app){
 		
 		$app->get('/home', [HomeController::class, 'index']);
 		
-		$app->get('/env', EnvController::class, 'index');
+		$app->get('/env', [EnvController::class, 'index']);
 };

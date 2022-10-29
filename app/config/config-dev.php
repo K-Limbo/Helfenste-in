@@ -1,7 +1,9 @@
 <?php
 
-use App\Controller\HomeController;
+use DI\ContainerBuilder;
 
-return [
-	HomeController::class => DI\create()->constructor("home/home.php"),
-];
+use function App\helper\config_path;
+
+$builder = new ContainerBuilder();
+
+return $builder;

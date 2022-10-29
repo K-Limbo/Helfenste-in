@@ -6,7 +6,7 @@ namespace App\helper;
 // ---Path Finders---
 
 function base_path(string $path = ""): string {
-		return __DIR__."/../../{$path}";
+		return realpath(__DIR__ . "/../../{$path}");
 }
 
 function resource_path(string $path = ""): string {
@@ -27,5 +27,9 @@ function templates_path(string $path = ""): string {
 
 function helperFunctions_path(string $path = ""): string {
 		return base_path("app/helper/{$path}");
+}
+
+function config_path(string $path =""):string {
+		return base_path("app/config/{$path}");
 }
 
